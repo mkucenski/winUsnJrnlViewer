@@ -163,7 +163,7 @@ int main(int argc, const char** argv) {
 				// TODO 	An interesting upgrade to this project would be to modify whether the timestamp is associated m,a,c,or b
 				// 		based on the action noted in the change journal (USN_REASON).
 				cout 	<< "|"
-						<< p_clsUSNRecord->getFilename() << " (" << p_clsUSNRecord->getReasons() << ")|"
+						<< p_clsUSNRecord->getFilename() << " (" << p_clsUSNRecord->getReasons(NULL, NULL, true) << ")|"
 						<< p_clsUSNRecord->getMFTEntry() << " (" << p_clsUSNRecord->getMFTSeq() << ")|"
 						<< "winusnjrnl--" << "|"
 						<< "|"
