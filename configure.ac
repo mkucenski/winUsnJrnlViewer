@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT(winUsnJrnlViewer, 20170324)
+AC_INIT(winUsnJrnlViewer, 20170329)
 AC_CONFIG_SRCDIR([src/winUsnJrnlViewer.cpp])
 AM_INIT_AUTOMAKE
 
