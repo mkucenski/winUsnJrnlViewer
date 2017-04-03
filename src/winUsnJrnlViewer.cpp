@@ -164,6 +164,7 @@ int main(int argc, const char** argv) {
 				// 		based on the action noted in the change journal (USN_REASON).
 				//
 				// TODO	Another idea would be options to dump all parent MFT/SEQ records such that you can build a list of folders from the HDD to plug back into this data
+				//			Even better--give an option to provide the actual MFT file and analyze it for the required parent/sequence information. Can TSK do that for me?
 				//
 				cout 	<< "|"
 						<< "[" << p_clsUSNRecord->getParentMFTEntry() << " (" << p_clsUSNRecord->getParentMFTSeq() << ")]/" << p_clsUSNRecord->getFilename() << " (" << p_clsUSNRecord->getReasons(NULL, NULL, true) << ")|"
