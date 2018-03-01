@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// #define _DEBUG_ 1
+// #define _DEBUG_
+#include "misc/debugMsgs.h"
+#include "misc/errMsgs.h"
 
 #include "libWinUsnJrnl/src/winUSNJournal.h"
 #include "libWinUsnJrnl/src/winUSNRecord.h"
@@ -155,7 +157,7 @@ int main(int argc, const char** argv) {
 		while (CjournalFile.getNextRecord(&p_clsUSNRecord) == USNJRNL_SUCCESS) {
 			cRecords++;
 
-			DEBUG_INFO("winUsnJrnlViewer p_clsUSNRecord.dtmTimestamp=" << p_clsUSNRecord->getTimestamp());
+			DEBUG("winUsnJrnlViewer p_clsUSNRecord.dtmTimestamp=" << p_clsUSNRecord->getTimestamp());
 			string strTime = getTimeString(tzcalc.calculateLocalTime(getFromWindows64(p_clsUSNRecord->getTimestamp())));
 			string strDate = getDateString(tzcalc.calculateLocalTime(getFromWindows64(p_clsUSNRecord->getTimestamp())));
 
